@@ -22,13 +22,11 @@ Try using `glimpse()` or `head()` to look at the structure of the data.
 *** =hint
 Use `glimpse(surveys)` to look at the structure of the data.
 
-*** =pre_exercise_code
-```{r}
 # The pre exercise code runs code to initialize the user's workspace.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
-library(readr)
-library(dplyr)
-surveys <- read.csv("surveys.csv")
+*** =pre_exercise_code
+```{r}
+surveys <- read.csv("https://github.com/ab604/data_cleaning/tree/master/datasets/surveys.csv, stringsAsFactors = FALSE")
 #glimpse(dat)
 ```
 

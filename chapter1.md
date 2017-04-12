@@ -41,7 +41,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:87071ce5bb
-## More movies
+## Finding the survey duration
 
 In the previous exercise, you saw a monthly rodent surveys dataset. In this exercise, we'll have another look at the dataset 
 
@@ -51,6 +51,10 @@ The monthly rodent surveys dataset, `surveys`, is again available in the workspa
 - Check out the structure of `surveys`.
 - Find the range of years over which the survey took place and assign it to `survey_timerange`.
 - Then return the range to the console by calling the object you've assigned.
+
+Variables in R data frames are called by using the name of the data frame followed by a dollar sign and the name of the variable. For example: `surveys$month` will return the values in the month column of the surveys dataset.
+
+Objects are assigned using an arrow symbol `<-`, such that `survey_number <- 5` assigns the number five to an object called `survey_number`.
 
 *** =hint
 - Use `str()` for the first instruction.
@@ -66,10 +70,11 @@ surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/cour
 *** =sample_code
 ```{r}
 # surveys is available in your workspace
-
-# Check out the structure of surveys
+# Check out the structure of surveys using glimpse()
 
 # Find the range of years over which the survey took place and assign it to `survey_timerange`
+# Assignment is done using the arrow  <-
+# The variables can be called using the dollar sign $
 
 # Show the range by calling the object you just created: survey_timerange
 

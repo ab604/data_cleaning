@@ -26,7 +26,7 @@ Use `glimpse(surveys)` to look at the structure of the data.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 *** =pre_exercise_code
 ```{r}
-surveys <- read.csv("https://github.com/ab604/data_cleaning/blob/master/datasets/surveys.csv, stringsAsFactors = FALSE")
+surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/surveys.csv, stringsAsFactors = FALSE")
 #glimpse(dat)
 ```
 

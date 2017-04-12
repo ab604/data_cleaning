@@ -8,8 +8,10 @@ attachments :
 ## Looking at the data
 The surveys data set includes continuing monthly rodent surveys. Each month rodents are trapped on all 24 experimental plots and information on each captured rodent is contained in this file. The data set should prove useful for **studying population dynamics and species interactions**.
 
-The `surveys.csv` dataset is loaded into the workspace.
+The `surveys` dataset is loaded into the workspace.
 Have a look at the data and identify which of these variables were NOT recorded.
+
+Try using `glimpse()` or `head()` to look at the structure of the data.
 
 *** =instructions
 - month
@@ -18,7 +20,7 @@ Have a look at the data and identify which of these variables were NOT recorded.
 - species
 
 *** =hint
-Try using `glimpse(dat)` or `head(dat)` to look at the structure of the data.
+Use `glimpse(surveys)` to look at the structure of the data.
 
 *** =pre_exercise_code
 ```{r}
@@ -26,7 +28,7 @@ Try using `glimpse(dat)` or `head(dat)` to look at the structure of the data.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 library(readr)
 library(dplyr)
-dat <- read_csv("surveys.csv")
+surveys <- read_csv("surveys.csv")
 #glimpse(dat)
 ```
 
@@ -44,11 +46,11 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 
 In the previous exercise, you saw a monthly rodent surveys dataset. In this exercise, we'll have another look at the dataset 
 
-A dataset with a selection of movies, `movie_selection`, is available in the workspace.
+The monthly rodent surveys dataset, `surveys`, is again available in the workspace.
 
 *** =instructions
-- Check out the structure of `movie_selection`.
-- Select movies with a rating of 5 or higher. Assign the result to `good_movies`.
+- Check out the structure of `surveys`.
+- Find the range of years over which the survey took place and assign it to `survey_timerange`.
 - Use `plot()` to  plot `good_movies$Run` on the x-axis, `good_movies$Rating` on the y-axis and set `col` to `good_movies$Genre`.
 
 *** =hint
@@ -60,40 +62,33 @@ A dataset with a selection of movies, `movie_selection`, is available in the wor
 ```{r}
 # You can also prepare your dataset in a specific way in the pre exercise code
 
-library(MindOnStats)
-data(Movies)
-movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
-
-# Clean up the environment
-rm(Movies)
+library(readr)
+library(dplyr)
+surveys <- read_csv("surveys.csv")
 ```
 
 *** =sample_code
 ```{r}
-# movie_selection is available in your workspace
+# surveys is available in your workspace
 
-# Check out the structure of movie_selection
+# Check out the structure of surveys
 
+# Find the range of years over which the survey took place and assign it to `survey_timerange`
 
-# Select movies that have a rating of 5 or higher: good_movies
-
-
-# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
+# Show the range by calling the object you just created: survey_timerange
 
 ```
 
 *** =solution
 ```{r}
-# movie_selection is available in your workspace
+# surveys is available in your workspace
 
-# Check out the structure of movie_selection
-str(movie_selection)
-
-# Select movies that have a rating of 5 or higher: good_movies
-good_movies <- movie_selection[movie_selection$Rating >= 5, ]
-
-# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
-plot(good_movies$Run, good_movies$Rating, col = good_movies$Genre)
+# Check out the structure of surveys
+glimpse(surveys)
+# Find the range of years over which the survey took place and assign it to `survey_timerange`
+survey_timerange <- range(surveys$year)
+# Show the range by calling the object you just created: survey_timerange
+survey_timerange
 ```
 
 *** =sct

@@ -1,33 +1,36 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
+title       : Introducing R
+description : Introduction to R for Southampton Data Carpentry
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:353ec4b851
-## A really bad movie
+## Looking at the data
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
+The surveys dataset is loaded into the workspace.
+Have a look at the data and identify which of these variables were NOT recorded.
 
 *** =instructions
-- Adventure
-- Action
-- Animation
-- Comedy
+- month
+- week
+- year
+- species
 
 *** =hint
-Have a look at the plot. Which color does the point with the lowest rating have?
+Try using `r glimpse(dat)` or `r head(dat)` to look at the structure of the data.
 
 *** =pre_exercise_code
 ```{r}
 # The pre exercise code runs code to initialize the user's workspace.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
+library(readr)
+library(dplyr)
+dat <- read_csv("surveys.csv")
 
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+#glimpse(dat)
+#library(ggplot2)
 
-library(ggplot2)
-
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
+#ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
 ```
 
 *** =sct
@@ -35,7 +38,7 @@ ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
 msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
+msg_success <- "Exactly! There's no week variable in the dataset."
 test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 

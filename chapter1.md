@@ -6,8 +6,9 @@ attachments :
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:353ec4b851
 ## Looking at the data
+The surveys data set includes continuing monthly rodent surveys. Each month rodents are trapped on all 24 experimental plots and information on each captured rodent is contained in this file. The data set should prove useful for **studying population dynamics and species interactions**.
 
-The surveys dataset is loaded into the workspace.
+The `surveys.csv` dataset is loaded into the workspace.
 Have a look at the data and identify which of these variables were NOT recorded.
 
 *** =instructions
@@ -17,7 +18,7 @@ Have a look at the data and identify which of these variables were NOT recorded.
 - species
 
 *** =hint
-Try using `r glimpse(dat)` or `r head(dat)` to look at the structure of the data.
+Try using `glimpse(dat)` or `head(dat)` to look at the structure of the data.
 
 *** =pre_exercise_code
 ```{r}
@@ -26,11 +27,7 @@ Try using `r glimpse(dat)` or `r head(dat)` to look at the structure of the data
 library(readr)
 library(dplyr)
 dat <- read_csv("surveys.csv")
-
 #glimpse(dat)
-#library(ggplot2)
-
-#ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
 ```
 
 *** =sct
@@ -45,7 +42,7 @@ test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 --- type:NormalExercise lang:r xp:100 skills:1 key:87071ce5bb
 ## More movies
 
-In the previous exercise, you saw a dataset about movies. In this exercise, we'll have a look at yet another dataset about movies!
+In the previous exercise, you saw a monthly rodent surveys dataset. In this exercise, we'll have another look at the dataset 
 
 A dataset with a selection of movies, `movie_selection`, is available in the workspace.
 

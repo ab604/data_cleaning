@@ -8,7 +8,7 @@ attachments :
 ## Looking at the data
 The surveys data set includes continuing monthly rodent surveys. Each month rodents are trapped on all 24 experimental plots and information on each captured rodent is contained in this file. The data set should prove useful for **studying population dynamics and species interactions**.
 
-The `surveys` dataset is loaded into the workspace.
+The `surveys` dataset is loaded into the workspace, along with the package `dplyr`.
 Have a look at the data and identify which of these variables were NOT recorded.
 
 Try using `glimpse()` or `head()` to look at the structure of the data.
@@ -26,7 +26,8 @@ Use `glimpse(surveys)` to look at the structure of the data.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 *** =pre_exercise_code
 ```{r}
-surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/surveys.csv, stringsAsFactors = FALSE")
+surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/surveys.csv", stringsAsFactors = FALSE)
+library(dplyr)
 #glimpse(dat)
 ```
 
@@ -49,16 +50,16 @@ The monthly rodent surveys dataset, `surveys`, is again available in the workspa
 *** =instructions
 - Check out the structure of `surveys`.
 - Find the range of years over which the survey took place and assign it to `survey_timerange`.
-- Use `plot()` to  plot `good_movies$Run` on the x-axis, `good_movies$Rating` on the y-axis and set `col` to `good_movies$Genre`.
+- Then return the range to the console by calling the object you've assigned.
 
 *** =hint
 - Use `str()` for the first instruction.
-- For the second instruction, you should use `...[movie_selection$Rating >= 5, ]`.
-- For the plot, use `plot(x = ..., y = ..., col = ...)`.
+- .
+- .
 
 *** =pre_exercise_code
 ```{r}
-surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/surveys.csv, stringsAsFactors = FALSE")
+surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/surveys.csv", stringsAsFactors = FALSE)
 ```
 
 *** =sample_code

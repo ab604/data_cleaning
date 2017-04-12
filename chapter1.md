@@ -28,7 +28,7 @@ Use `glimpse(surveys)` to look at the structure of the data.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 library(readr)
 library(dplyr)
-surveys <- read_csv("surveys.csv")
+surveys <- read.csv("surveys.csv")
 #glimpse(dat)
 ```
 

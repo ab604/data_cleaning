@@ -58,12 +58,7 @@ The monthly rodent surveys dataset, `surveys`, is again available in the workspa
 
 *** =pre_exercise_code
 ```{r}
-# You can also prepare your dataset in a specific way in the pre exercise code
-
-library(readr)
-library(dplyr)
-surveys <- read_csv("surveys.csv")
-```
+surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/surveys.csv, stringsAsFactors = FALSE")
 
 *** =sample_code
 ```{r}
@@ -93,17 +88,17 @@ survey_timerange
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
-test_function("str", args = "object",
-              not_called_msg = "You didn't call `str()`!",
-              incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
+#test_function("str", args = "object",
+              #not_called_msg = "You didn't call `str()`!",
+             # incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
 
-test_object("good_movies")
+#test_object("good_movies")
 
-test_function("plot", args = "x")
-test_function("plot", args = "y")
-test_function("plot", args = "col")
+#test_function("plot", args = "x")
+#test_function("plot", args = "y")
+#test_function("plot", args = "col")
 
-test_error()
+#test_error()
 
 success_msg("Good work!")
 ```

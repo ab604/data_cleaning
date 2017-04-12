@@ -59,6 +59,7 @@ The monthly rodent surveys dataset, `surveys`, is again available in the workspa
 *** =pre_exercise_code
 ```{r}
 surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/surveys.csv, stringsAsFactors = FALSE")
+```
 
 *** =sample_code
 ```{r}

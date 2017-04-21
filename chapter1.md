@@ -17,7 +17,7 @@ Try using `glimpse()` or `head()` to look at the structure of the data.
 - month
 - week
 - year
-- species
+- species_id
 
 *** =hint
 Use `glimpse(surveys)` to look at the structure of the data.
@@ -26,7 +26,7 @@ Use `glimpse(surveys)` to look at the structure of the data.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 *** =pre_exercise_code
 ```{r}
-surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/surveys.csv", stringsAsFactors = FALSE)
+surveys <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/production/course_2129/datasets/portal_data_joined.csv", stringsAsFactors = FALSE)
 library(dplyr)
 #glimpse(dat)
 ```
